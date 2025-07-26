@@ -1,0 +1,48 @@
+1. Master Node (Control Plane):
+
+API Server: The central hub that receives all commands (REST requests); it’s how you interact with Kubernetes.
+Scheduler: Decides which worker node should run your new application (pod).
+Controller Manager: Keeps track of things like failed nodes, scaling, and replication.
+etcd: A key-value store that saves all cluster data (configuration and state).
+2. Worker Nodes:
+
+Kubelet: Makes sure containers are running as they should on its node; talks to the master.
+Container Runtime: Software (like Docker) that actually runs your containers.
+Kube Proxy: Handles networking, enabling communication inside and outside the cluster.
+3. Pods:
+The smallest unit in Kubernetes, usually running one or more containers.
+
+How It Works Together:
+The master node manages the cluster, scheduling applications (pods) onto worker nodes.
+Worker nodes run your apps, keep them healthy, and handle networking.
+
+
++-----------------------------+
+|        Control Plane        |
+|-----------------------------|
+|  +-----------------------+  |
+|  |     API Server        |  |
+|  +-----------------------+  |
+|  |   Controller Manager  |  |
+|  +-----------------------+  |
+|  |      Scheduler        |  |
+|  +-----------------------+  |
+|  |        etcd           |  |
+|  +-----------------------+  |
++-----------------------------+
+             |
+             v
++-----------------------------+    +-----------------------------+
+|        Worker Node 1        |    |        Worker Node 2        |
+|-----------------------------|    |-----------------------------|
+|  +-----------------------+  |    |  +-----------------------+  |
+|  |       Kubelet         |  |    |  |       Kubelet         |  |
+|  +-----------------------+  |    |  +-----------------------+  |
+|  |      Kube Proxy       |  |    |  |      Kube Proxy       |  |
+|  +-----------------------+  |    |  +-----------------------+  |
+|  |   Container Runtime   |  |    |  |   Container Runtime   |  |
+|  +-----------------------+  |    |  +-----------------------+  |
+|  |     +-----------+     |  |    |  |     +-----------+     |  |
+|  |     |   Pods    |     |  |    |  |     |   Pods    |     |  |
+|  |     +-----------+     |  |    |  |     +-----------+     |  |
++-----------------------------+    +-----------------------------+

@@ -1,7 +1,4 @@
 
-## 📁 `DAY_2/README.md` (UPDATED – COPY & PASTE)
-
-````md
 # Day 02 – Kubernetes Installation & kubectl Practical (EC2 Ubuntu)
 
 ## 📌 Objective

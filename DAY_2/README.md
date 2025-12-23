@@ -178,22 +178,3 @@ kubectl version
 
 ```
 
----
-
-## 🔥 COMMIT MESSAGE (IMPORTANT)
-```
-
-Add Day 02 Kubernetes installation on EC2 Ubuntu with kubectl practical
-
-```
-
----
-
-## 💼 Interview Explanation (1-Line)
-> I installed Kubernetes tools on an EC2 Ubuntu instance using Docker, Minikube, and kubectl, and verified the cluster using kubectl commands.
-
----
-
-
-If you want **Day-3 Pod practical README + YAML**, just tell me 👍
-```

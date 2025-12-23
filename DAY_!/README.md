@@ -4,6 +4,11 @@
 To understand what Kubernetes is, why it is used, and how its architecture works at a high level.
 
 ---
+## 🏗️ Kubernetes Architecture Diagram
+
+<p align="center">
+  <img src="./k8s.png" alt="Kubernetes Architecture" width="800"/>
+</p>
 
 
 

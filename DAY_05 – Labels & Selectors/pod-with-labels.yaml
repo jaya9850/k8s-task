@@ -1,0 +1,17 @@
+
+---
+
+## 📜 pod-with-labels.yaml (DAY_05)
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labeled-pod
+  labels:
+    app: frontend
+    env: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx

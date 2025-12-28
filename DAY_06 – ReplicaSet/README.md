@@ -23,3 +23,8 @@ kubectl apply -f replicaset.yaml
 kubectl get rs
 kubectl get pods
 kubectl delete pod <pod-name>
+
+
+Interview Tip
+
+ReplicaSet replaces failed Pods automatically.
